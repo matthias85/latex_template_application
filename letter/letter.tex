@@ -1,0 +1,87 @@
+\documentclass[%
+	fontsize=12pt, % Schriftgröße
+	version=last%  % Neueste Version von KOMA-Skript verwenden
+	enlargefirstpage=true,
+	firstfoot=false
+]{scrlttr2}
+
+% ===== Deutsche Sprache =====
+\usepackage[utf8]{inputenc}
+\usepackage[ngerman]{babel}
+
+
+% ============================
+
+\LoadLetterOption{DIN} % Einstellungen für DIN 676 laden
+
+\LoadLetterOption{sender} % Absenderdaten und -einstellungen aus absender.lco laden
+
+\usepackage{graphicx} % Um Grafiken (bspw. das Logo) einbinden zu können
+
+% seitenlayout abstände
+\usepackage[left=2.5cm,right=2cm,top=2cm,bottom=0.5cm]{geometry}
+
+
+% absätze und einrückungen
+\parindent 0pt
+\parskip 12pt
+
+\begin{document}
+	
+	
+	\pagenumbering{gobble}
+	
+	\begin{letter}{%
+			% ===== Zielanschrift =====
+			Company\\
+			To\\
+			Street Number\\
+			PC City%
+			% =======================
+		}
+		
+		% ====== Geschäftszeichenzeile =========
+		\setkomavar{yourref}{}          % Ihr Zeichen
+		\setkomavar{yourmail}{}         % Ihr Schreiben vom
+		\setkomavar{myref}{}            % Unser Zeichen
+		\setkomavar{customer}{}         % Kundennummer
+		\setkomavar{invoice}{}          % Rechnungsnummer
+		\setkomavar{place}{City}		% Ort
+		\setkomavar{date}{\today}       % Datum
+		% =====================================
+		
+		% \setkomavar{title}{Titel}
+		
+		\setkomavar{subject}{Subject}
+		
+		\opening{Dear Mr...}
+		
+		Text
+		
+		\closing{Best Regards,}
+		
+		% ===== Postskriptum =====
+		%\ps PS: \dots
+		% ========================
+		
+		% ===== Anlage(n) =====
+		\setkomavar*{enclseparator}{Assets}
+		
+		
+		\encl{%
+			Motivation\\
+			Vitae\\
+			Certificate%
+		}
+		% ===================
+		
+		% ===== Verteiler =====
+		% \setkomavar*{ccseparator}{Kopie an}
+		%\cc{%
+			%Verteiler 1\\
+			%Verteiler 2%
+		%}
+		% =====================
+		
+	\end{letter}
+\end{document}

@@ -1,0 +1,53 @@
+\begin{titlepage}
+
+	\begin{center}
+		\vspace*{2cm}
+		
+		% title
+		{\huge\textbf{\newtitle}}\\[4cm]
+		
+		% image
+		\begin{tikzpicture}
+			\begin{scope}
+				\clip [rounded corners=3.0cm] (0,0) rectangle coordinate (centerpoint) (6,6cm); 
+				\node [inner sep=0pt] at (centerpoint) {\includegraphics[width=6.0cm]{img.jpg}};
+			\end{scope}
+		\end{tikzpicture}
+		
+		\vspace{1.5cm}
+		
+		% person
+		{\large\textbf{FirstName LastName}}\\[0.2cm]
+		
+		\begin{tikzpicture}
+			\begin{scope}
+				\node [inner sep=0pt] at (centerpoint) {\includegraphics[width=\textwidth]{horizontal_line.png}};
+			\end{scope}
+		\end{tikzpicture}
+		
+		\vspace{0.25cm}
+		
+		\begin{tikzpicture}
+		\begin{scope}
+		\node [inner sep=0pt] at (centerpoint) {\includegraphics[scale=0.03]{icon_location.png}};
+		\end{scope}
+		\end{tikzpicture}\\
+		Street Number, PostalCode City\\[0.8cm]
+		
+		\begin{tikzpicture}
+		\begin{scope}
+		\node [inner sep=0pt] at (centerpoint) {\includegraphics[scale=0.03]{icon_phone.png}};
+		\end{scope}
+		\end{tikzpicture}\\
+		PhoneNumber \\[0.8cm]
+		
+		\begin{tikzpicture}
+		\begin{scope}
+		\node [inner sep=0pt] at (centerpoint) {\includegraphics[scale=0.03]{icon_email.png}};
+		\end{scope}
+		\end{tikzpicture}\\
+		E-Mail\\
+		
+	\end{center}
+	
+\end{titlepage}

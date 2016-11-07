@@ -1,0 +1,116 @@
+\documentclass[
+	a4paper, % Papierformat 
+	oneside, % einseitiges Dokument 
+	ngerman, % für Umlaute, Silbentrennung etc.
+	12pt, % Schriftgröße
+	%parskip=half, % Abstand zwischen Absätzen (halbe Zeile) 
+	chapteratlists=0pt, % abstand einträge in listen (abbildungs- und tabellenverzeichnis)
+	listof=totocnumbered, % Verzeichnisse im Inhaltsverzeichnis aufführen
+	%index=totoc, % Index im Inhaltsverzeichnis aufführen
+	numbers=noenddot, % keine Punkte hinter der letzten Zahl
+	%captions=tableheading, % Beschriftung von Tabellen unterhalb ausgeben 
+	%final % Status des Dokuments (final/draft)
+	parskip % Zeile Abstand zwischen Absätzen.
+]{scrreprt}
+
+% colors
+\usepackage{color}
+\definecolor{lightgray}{rgb}{0.7,0.7,0.7}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{darkgray}{rgb}{0.35,0.35,0.35}
+\definecolor{lightblue}{rgb}{0.297,0.543,0.785}
+
+
+% to include different doc-types
+\usepackage{pdfpages}
+
+% set title, author and date to use in titlepage
+\makeatletter
+\let\newtitle\@title
+\let\newauthor\@author
+\let\newdate\@date
+\makeatother
+
+
+\usepackage[utf8]{inputenc}
+\usepackage[ngerman]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{selinput}
+\usepackage{graphicx}
+\usepackage{lmodern}
+
+% text spacing 
+\usepackage[onehalfspacing]{setspace}
+
+\usepackage[babel,german=quotes]{csquotes}
+
+% tables
+\usepackage{colortbl}
+\usepackage{longtable}
+\usepackage{tabularx}
+\usepackage{booktabs}
+
+\newlength{\colthree} %definiere neue länge
+\setlength{\colthree}{\textwidth} %setze neue länge auf textbreite
+\addtolength{\colthree}{-6\tabcolsep} %subtrahiere -6\cdot textbreite von asdf
+
+\newlength{\colfour} %definiere neue länge
+\setlength{\colfour}{\textwidth} %setze neue länge auf textbreite
+\addtolength{\colfour}{-8\tabcolsep} %subtrahiere -8\cdot textbreite von asdf
+
+\newlength{\colfive} %definiere neue länge
+\setlength{\colfive}{\textwidth} %setze neue länge auf textbreite
+\addtolength{\colfive}{-10\tabcolsep} %subtrahiere -8\cdot textbreite von asdf
+
+\usepackage{transparent}
+\graphicspath{{_img/}}
+
+% images rounded
+\usepackage{tikz}
+
+\SelectInputMappings{
+	adieresis={ä},
+	germandbls={ß},
+	Euro={€}
+}
+
+% hyperlinks
+\usepackage[
+	colorlinks=true,
+	breaklinks=false,
+	citecolor=black,
+	linkcolor=black,
+	menucolor=black,
+	urlcolor=black
+]{hyperref}
+
+% seitenlayout abstände
+\usepackage[left=2.5cm,right=2cm,top=2cm,bottom=2cm]{geometry}
+
+% header and footer
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[l]{}
+\rfoot{}
+
+\fancypagestyle{plain}{
+	\fancyhf{} 
+	\fancyfoot[OR]{\thepage} 
+	\renewcommand{\headrulewidth}{0pt} 
+	\renewcommand{\footrulewidth}{0pt}
+} 
+\fancyhf{} % sets both header and footer to nothing
+\renewcommand{\headrulewidth}{0pt}
+
+\usepackage{float}
+
+% absätze und einrückungen
+\parindent 0pt
+\parskip 12pt
+
+% text formatting emphasizing
+\usepackage{ulem}
+
+% pagenumbering none
+\pagenumbering{gobble}

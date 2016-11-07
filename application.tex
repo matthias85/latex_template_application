@@ -1,0 +1,30 @@
+% meta
+\title{Application}
+\author{LastName, FirstName}
+\date{\today}
+
+% preamble, config, packages
+\input{_config/preamble.tex}
+
+% main document
+\begin{document}
+	
+	% letter
+	\includepdf[pages=1-]{letter/letter.pdf}
+	\clearpage
+	
+	% portfolio
+	\input{portfolio/titlepage}
+	\clearpage
+	
+	\input{portfolio/motivation}
+	\clearpage
+	
+	\input{portfolio/vitae}
+	\clearpage
+	
+	% assets
+	%\includepdf[pages=1-]{_assets/certificate.pdf}
+	%\clearpage
+		
+\end{document}
